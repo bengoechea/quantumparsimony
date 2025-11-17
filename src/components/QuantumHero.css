@@ -1,0 +1,218 @@
+.quantum-hero {
+  position: relative;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 50%, #0f1419 100%);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(99, 102, 241, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.hero-title {
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  font-weight: 800;
+  margin: 0;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.title-quantum {
+  display: block;
+  background: linear-gradient(135deg, #00f5ff 0%, #7c3aed 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.title-hub {
+  display: block;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.hero-subtitle {
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 1rem;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+}
+
+.principle-display {
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 4rem 0;
+}
+
+.formula-content {
+  padding: 3rem;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.formula-main {
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-family: 'Courier New', monospace;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 1rem;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+}
+
+.formula-alt {
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  color: rgba(255, 255, 255, 0.5);
+  font-style: italic;
+}
+
+.transform-arrow {
+  font-size: 6rem;
+  font-weight: bold;
+  opacity: 0.8;
+}
+
+.simple-word {
+  font-size: clamp(3rem, 8vw, 7rem);
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.simple-tagline {
+  font-size: clamp(1.2rem, 3vw, 2rem);
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 1rem;
+  font-weight: 300;
+}
+
+.simple-compression {
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  color: rgba(255, 255, 255, 0.5);
+  padding: 0.5rem 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 50px;
+  display: inline-block;
+  margin-top: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.particle-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px currentColor;
+}
+
+.principle-indicators {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.indicator {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid;
+  background: transparent;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+.indicator:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.indicator.active {
+  box-shadow: 0 0 20px currentColor;
+}
+
+.scroll-indicator {
+  margin-top: 4rem;
+  color: rgba(255, 255, 255, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.scroll-text {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.scroll-arrow {
+  font-size: 2rem;
+  opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+  .quantum-hero {
+    padding: 1rem;
+  }
+
+  .principle-display {
+    min-height: 300px;
+    margin: 2rem 0;
+  }
+
+  .formula-content {
+    padding: 2rem 1rem;
+  }
+
+  .indicator {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+
+  .principle-indicators {
+    gap: 0.5rem;
+  }
+}

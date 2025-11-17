@@ -1,17 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import QuantumHero from '../components/QuantumHero'
 
 function Home() {
   return (
     <div className="fade-in">
-      <section className="hero">
-        <h1>Quantum Parsimony Hub</h1>
-        <p>
-          Exploring Ken Mendoza's revolutionary framework for ontological clarity in science through 
-          labyrinthine orthogonal computational modeling grounded in classical philosophy of science, 
-          interdisciplinary knowledge, and information-theoretic principles.
-        </p>
-      </section>
+      <QuantumHero />
 
       <div className="section">
         <h2>The Mission: Clearing the Ontological Fog</h2>
