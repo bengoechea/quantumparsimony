@@ -149,48 +149,99 @@ const QuantumHero = () => {
 
       {/* Main Animation Area */}
       <div className="animation-container">
-        {/* Left: Spinning Circle with Equations */}
-        <div className="equation-circle">
+        {/* Left: Quantum Clock with Numbers */}
+        <div className="quantum-clock">
+          {/* Static numbered indicators in circle (like clock) */}
           {principles.map((principle, idx) => {
-            const angle = (360 / principles.length) * idx;
-            const isActive = idx === currentIndex && phase === 'focused';
-            const rotation = angle - (currentIndex * 60);
+            const angle = (360 / principles.length) * idx - 90; // Start at top (12 o'clock)
+            const isActive = idx === currentIndex;
             
             return (
               <motion.div
-                key={principle.id}
-                className={`equation-node ${isActive ? 'active' : ''}`}
+                key={`number-${principle.id}`}
+                className="clock-number"
                 style={{
-                  transform: `rotate(${rotation}deg) translate(180px) rotate(-${rotation}deg)`,
+                  position: 'absolute',
+                  top: '50%',
+                  left: '50%',
+                  transform: `translate(-50%, -50%) rotate(${angle}deg) translate(200px) rotate(-${angle}deg)`,
                 }}
                 animate={{
-                  scale: isActive ? 1.6 : 1,
-                  opacity: isActive ? 1 : 0.4,
+                  scale: isActive ? 1.4 : 1,
+                  opacity: isActive ? 1 : 0.3,
                 }}
-                transition={{ duration: 2, type: 'spring', stiffness: 60 }}
+                transition={{ duration: 0.6, type: 'spring' }}
+                onClick={() => {
+                  setCurrentIndex(idx);
+                  setPhase('spinning');
+                }}
               >
                 <div 
-                  className="equation-content"
+                  className="number-circle"
                   style={{ 
                     borderColor: principle.color,
-                    boxShadow: isActive ? `0 0 40px ${principle.color}` : 'none'
+                    backgroundColor: isActive ? `${principle.color}44` : 'transparent',
+                    boxShadow: isActive ? `0 0 30px ${principle.color}` : 'none',
+                    color: isActive ? principle.color : 'rgba(255,255,255,0.4)',
                   }}
                 >
-                  <div className="equation-text">{principle.equation}</div>
-                  {isActive && (
-                    <motion.div
-                      className="equation-label"
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: 0.5 }}
-                    >
-                      {principle.label}
-                    </motion.div>
-                  )}
+                  {principle.id}
                 </div>
               </motion.div>
             );
           })}
+          
+          {/* Rotating equations inside the clock */}
+          <motion.div 
+            className="equation-ring"
+            animate={{
+              rotate: -(currentIndex * 60), // Rotate the ring opposite to keep numbers stationary
+            }}
+            transition={{ duration: 2, type: 'spring', stiffness: 60 }}
+          >
+            {principles.map((principle, idx) => {
+              const angle = (360 / principles.length) * idx;
+              const isActive = idx === currentIndex && phase === 'focused';
+              
+              return (
+                <div
+                  key={principle.id}
+                  className={`equation-node ${isActive ? 'active' : ''}`}
+                  style={{
+                    position: 'absolute',
+                    top: '50%',
+                    left: '50%',
+                    transform: `translate(-50%, -50%) rotate(${angle}deg) translate(160px) rotate(-${angle}deg)`,
+                  }}
+                >
+                  <motion.div 
+                    className="equation-content"
+                    style={{ 
+                      borderColor: principle.color,
+                      boxShadow: isActive ? `0 0 40px ${principle.color}` : 'none'
+                    }}
+                    animate={{
+                      scale: isActive ? 1.6 : 1,
+                      opacity: isActive ? 1 : 0.3,
+                    }}
+                    transition={{ duration: 2, type: 'spring', stiffness: 60 }}
+                  >
+                    <div className="equation-text">{principle.equation}</div>
+                    {isActive && (
+                      <motion.div
+                        className="equation-label"
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.5 }}
+                      >
+                        {principle.label}
+                      </motion.div>
+                    )}
+                  </motion.div>
+                </div>
+              );
+            })}
+          </motion.div>
           
           {/* Center pulse */}
           <motion.div
@@ -279,28 +330,7 @@ const QuantumHero = () => {
         </div>
       </div>
 
-      {/* Bottom: Principle Indicators */}
-      <div className="principle-indicators-new">
-        {principles.map((principle, idx) => (
-          <motion.button
-            key={principle.id}
-            className={`indicator-new ${idx === currentIndex ? 'active' : ''}`}
-            onClick={() => {
-              setCurrentIndex(idx);
-              setPhase('spinning');
-            }}
-            whileHover={{ scale: 1.15 }}
-            whileTap={{ scale: 0.95 }}
-            style={{
-              borderColor: principle.color,
-              backgroundColor: idx === currentIndex ? `${principle.color}33` : 'transparent',
-              boxShadow: idx === currentIndex ? `0 0 20px ${principle.color}` : 'none',
-            }}
-          >
-            {principle.id}
-          </motion.button>
-        ))}
-      </div>
+
 
       <motion.div
         className="scroll-hint"
