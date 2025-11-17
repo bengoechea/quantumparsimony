@@ -114,20 +114,43 @@ const QuantumHero = () => {
             <motion.div
               key="mechanics"
               className="mechanics-label"
-              exit={{ opacity: 0, scale: 0.8 }}
+              exit={{ opacity: 0, scale: 0.8, filter: 'blur(10px)' }}
               transition={{ duration: 1 }}
             >
               <span className="quantum-text">Quantum</span>
               <motion.span 
                 className="mechanics-text"
-                animate={mechanicsCrossed ? { opacity: 0 } : {}}
               >
                 Mechanics
+                {/* First diagonal red line */}
                 <motion.div
-                  className="cross-line"
-                  initial={{ scaleX: 0 }}
-                  animate={{ scaleX: mechanicsCrossed ? 1 : 0 }}
-                  transition={{ duration: 0.8 }}
+                  className="cross-line cross-line-1"
+                  initial={{ scaleX: 0, opacity: 0 }}
+                  animate={{ 
+                    scaleX: mechanicsCrossed ? 1 : 0,
+                    opacity: mechanicsCrossed ? 1 : 0 
+                  }}
+                  transition={{ duration: 0.4, delay: 0 }}
+                />
+                {/* Second diagonal red line (opposite direction) */}
+                <motion.div
+                  className="cross-line cross-line-2"
+                  initial={{ scaleX: 0, opacity: 0 }}
+                  animate={{ 
+                    scaleX: mechanicsCrossed ? 1 : 0,
+                    opacity: mechanicsCrossed ? 1 : 0 
+                  }}
+                  transition={{ duration: 0.4, delay: 0.2 }}
+                />
+                {/* Horizontal red line through middle */}
+                <motion.div
+                  className="cross-line cross-line-3"
+                  initial={{ scaleX: 0, opacity: 0 }}
+                  animate={{ 
+                    scaleX: mechanicsCrossed ? 1 : 0,
+                    opacity: mechanicsCrossed ? 1 : 0 
+                  }}
+                  transition={{ duration: 0.4, delay: 0.4 }}
                 />
               </motion.span>
             </motion.div>

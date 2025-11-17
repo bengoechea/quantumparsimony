@@ -53,17 +53,33 @@
   font-weight: 800;
   color: rgba(255, 255, 255, 0.6);
   text-transform: uppercase;
+  display: inline-block;
 }
 
 .cross-line {
   position: absolute;
+  left: -10%;
+  right: -10%;
+  height: 5px;
+  background: #ff0000;
+  transform-origin: left center;
+  box-shadow: 0 0 20px #ff0000, 0 0 40px #ff0000;
+  border-radius: 2px;
+}
+
+.cross-line-1 {
+  top: 20%;
+  transform: rotate(-15deg);
+}
+
+.cross-line-2 {
   top: 50%;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: #f04;
-  transform-origin: center;
-  box-shadow: 0 0 20px #f04;
+  transform: translateY(-50%) rotate(15deg);
+}
+
+.cross-line-3 {
+  top: 80%;
+  transform: rotate(-15deg);
 }
 
 .parsimony-text {
