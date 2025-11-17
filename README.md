@@ -2,9 +2,13 @@
 
 A comprehensive web hub exploring **Ken Mendoza's revolutionary framework** for ontological clarity in science through labyrinthine orthogonal computational modeling, grounded in classical philosophy of science, interdisciplinary knowledge, and information-theoretic principles.
 
-## 🌐 Live Demo
+## 🚀 Deploy Your Own Instance
 
-**Access the hub:** https://3000-iju0nkau728sn26y181tu-d0b9e1e2.sandbox.novita.ai
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/bengoechea/quantumparsimony)
+
+**One-click deployment to make this hub publicly accessible!**
+
+See [QUICK_DEPLOY.md](QUICK_DEPLOY.md) or [DEPLOY_NOW.html](DEPLOY_NOW.html) for deployment options.
 
 ## 🎯 Mission
 
