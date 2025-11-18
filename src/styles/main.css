@@ -306,6 +306,7 @@ body {
   margin: 1.5rem 0;
   text-align: center;
   border: 2px solid var(--border-color);
+  border-left: none;
 }
 
 .formula-block p:first-child {
