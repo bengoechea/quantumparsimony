@@ -182,21 +182,22 @@
 
 .equation-text {
   font-family: 'Courier New', 'SF Mono', monospace;
-  font-size: 1rem;
-  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.95);
   text-align: center;
-  line-height: 1.4;
-  font-weight: 500;
-  letter-spacing: 0.02em;
+  line-height: 1.5;
+  font-weight: 600;
+  letter-spacing: 0.05em;
 }
 
 .equation-label {
-  margin-top: 0.8rem;
-  font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.85);
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.9);
   text-align: center;
-  font-weight: 600;
-  letter-spacing: 0.03em;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
 
 .circle-center {

@@ -301,11 +301,17 @@ body {
 /* Formula blocks */
 .formula-block {
   background: var(--bg-secondary);
-  padding: 2rem;
+  padding: 3rem;
   border-radius: 8px;
   margin: 1.5rem 0;
   text-align: center;
   border: 2px solid var(--border-color);
+}
+
+.formula-block p:first-child {
+  font-size: 3rem !important;
+  font-weight: 500;
+  line-height: 1.4;
 }
 
 /* Buttons */

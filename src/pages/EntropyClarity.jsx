@@ -20,10 +20,10 @@ function EntropyClarity() {
         </p>
         
         <div className="formula-block">
-          <p style={{ fontSize: '1.5rem', fontFamily: 'serif' }}>
+          <p style={{ fontSize: '3rem', fontFamily: 'serif', fontWeight: '500' }}>
             dS ≥ δQ / T
           </p>
-          <p style={{ marginTop: '1rem', color: 'var(--text-secondary)' }}>
+          <p style={{ marginTop: '1rem', color: 'var(--text-secondary)', fontSize: '1.1rem' }}>
             Where S is entropy, Q is heat, and T is temperature
           </p>
         </div>
@@ -56,10 +56,10 @@ function EntropyClarity() {
         </p>
 
         <div className="formula-block">
-          <p style={{ fontSize: '1.5rem', fontFamily: 'serif' }}>
+          <p style={{ fontSize: '3rem', fontFamily: 'serif', fontWeight: '500' }}>
             S = -Tr(ρ ln ρ)
           </p>
-          <p style={{ marginTop: '1rem', color: 'var(--text-secondary)' }}>
+          <p style={{ marginTop: '1rem', color: 'var(--text-secondary)', fontSize: '1.1rem' }}>
             Where ρ is the density matrix of a quantum system
           </p>
         </div>
@@ -95,10 +95,10 @@ function EntropyClarity() {
         </p>
 
         <div className="formula-block">
-          <p style={{ fontSize: '1.5rem', fontFamily: 'serif' }}>
+          <p style={{ fontSize: '3rem', fontFamily: 'serif', fontWeight: '500' }}>
             H = -Σ p(x) log₂ p(x)
           </p>
-          <p style={{ marginTop: '1rem', color: 'var(--text-secondary)' }}>
+          <p style={{ marginTop: '1rem', color: 'var(--text-secondary)', fontSize: '1.1rem' }}>
             Where p(x) is the probability of message x
           </p>
         </div>
