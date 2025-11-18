@@ -244,8 +244,8 @@ const QuantumHero = () => {
                       boxShadow: isActive ? `0 0 40px ${principle.color}` : 'none'
                     }}
                     animate={{
-                      scale: isActive ? 1.6 : 1,
-                      opacity: isActive ? 1 : 0.3,
+                      scale: isActive ? 2.8 : 1,
+                      opacity: isActive ? 1 : 0.2,
                     }}
                     transition={{ duration: 2, type: 'spring', stiffness: 60 }}
                   >
