@@ -21,7 +21,16 @@ Just as coding follows the DRY (Don't Repeat Yourself) principle, **nature's cod
 
 ## 📚 Hub Sections
 
-### 1. 🔥 Entropy vs Information
+### 1. 🎙️ Podcasts (NEW!)
+**Listen to Ken Mendoza discuss his forty-year quest and the information-first paradigm**
+
+Featured Episode: **"Information Dictates Energy: The Forty Year Quest"**
+- In-depth exploration of why information is primary, not derivative
+- How ontological clarity emerged from forty years of investigation
+- The computational nature of reality revealed
+- ~45 minutes of comprehensive discussion
+
+### 2. 🔥 Entropy vs Information
 How Clausius' S (entropy in thermodynamics) was conflated with Shannon's H (information entropy), creating generations of confusion. Von Neumann's advice to Shannon inadvertently perpetuated the muddle between heat and information.
 
 **Key Points:**
