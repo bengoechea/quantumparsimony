@@ -35,32 +35,40 @@ function Podcasts() {
             </ul>
           </div>
 
-          <div style={{ marginTop: '1.5rem', background: '#f8f9fa', padding: '1rem', borderRadius: '8px' }}>
+          <div style={{ marginTop: '1.5rem', background: 'var(--bg-primary)', padding: '1.5rem', borderRadius: '8px', border: '1px solid var(--border-color)' }}>
+            <div className="warning-box" style={{ marginBottom: '1rem' }}>
+              <strong>🎙️ Audio Setup Required</strong>
+              <p style={{ marginTop: '0.5rem' }}>
+                The podcast audio file (27 MB) needs to be uploaded to Cloudflare R2 for optimal streaming.
+                See <code>R2_UPLOAD_INSTRUCTIONS.md</code> in the repository for setup steps.
+              </p>
+              <p style={{ marginTop: '0.5rem', fontSize: '0.9rem' }}>
+                <strong>Quick Setup:</strong>
+              </p>
+              <ol style={{ marginLeft: '1.5rem', marginTop: '0.5rem', fontSize: '0.9rem' }}>
+                <li>Go to Cloudflare Dashboard → R2</li>
+                <li>Create bucket: <code>quantum-parsimony-podcasts</code></li>
+                <li>Upload file from <code>public/podcasts/</code></li>
+                <li>Enable public access</li>
+                <li>Update the audio source URL below</li>
+              </ol>
+            </div>
+            
             <audio 
               controls 
               style={{ width: '100%', marginTop: '0.5rem' }}
               preload="metadata"
             >
-              <source src="/podcasts/Information_Dictates_Energy_The_Forty_Year_Quest.m4a" type="audio/x-m4a" />
               <source src="/podcasts/Information_Dictates_Energy_The_Forty_Year_Quest.m4a" type="audio/mp4" />
-              Your browser does not support the audio element.
+              <source src="/podcasts/Information_Dictates_Energy_The_Forty_Year_Quest.m4a" type="audio/x-m4a" />
+              Your browser does not support the audio element. Please use a modern browser to listen to this podcast.
             </audio>
             <p style={{ marginTop: '0.5rem', fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
               Duration: ~45 minutes | Format: M4A
             </p>
-          </div>
-
-          <div className="interactive-demo" style={{ marginTop: '1.5rem' }}>
-            <h4>Download Options</h4>
-            <p>Listen offline or on your preferred podcast player:</p>
-            <a 
-              href="/podcasts/Information_Dictates_Energy_The_Forty_Year_Quest.m4a" 
-              download 
-              className="btn"
-              style={{ marginRight: '1rem', marginTop: '0.5rem' }}
-            >
-              Download Episode
-            </a>
+            <p style={{ marginTop: '0.5rem', fontSize: '0.85rem', color: 'var(--text-secondary)', fontStyle: 'italic' }}>
+              Note: For production deployment, host audio on Cloudflare R2 for better performance and free global delivery.
+            </p>
           </div>
         </div>
       </div>
