@@ -8,6 +8,7 @@ import ComputationalModeling from './pages/ComputationalModeling'
 import QuantumParsimony from './pages/QuantumParsimony'
 import Timeline from './pages/Timeline'
 import Philosophy from './pages/Philosophy'
+import Podcasts from './pages/Podcasts'
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/quantum-parsimony" element={<QuantumParsimony />} />
           <Route path="/timeline" element={<Timeline />} />
           <Route path="/philosophy" element={<Philosophy />} />
+          <Route path="/podcasts" element={<Podcasts />} />
         </Routes>
       </main>
     </div>

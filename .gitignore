@@ -33,3 +33,9 @@ logs/
 
 # OS files
 Thumbs.db
+
+# Large media files (host separately)
+*.m4a
+*.mp3
+*.mp4
+*.mov
